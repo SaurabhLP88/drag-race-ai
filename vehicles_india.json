@@ -1,0 +1,739 @@
+{
+  "Motorcycle": {
+    "Royal Enfield": {
+        "Hunter 350": ["Base", "Mid", "Top"],
+        "Classic 350": ["Redditch", "Halcyon", "Signals", "Dark", "Chrome"],
+        "Meteor 350": ["Fireball", "Stellar", "Supernova"],
+        "Bullet 350": ["Military Red", "Military Black", "Standard Maroon", "Standard Black Gold"],
+        "Interceptor 650": ["Standard", "Custom", "Black Ray"],
+        "Continental GT 650": ["Standard", "Custom", "Slipstream Blue", "Apex Grey"],
+        "Himalayan 450": ["Base", "Pass", "Summit", "Mana Black"],
+        "Scram 440": ["Trial", "Force"],
+        "Super Meteor 650": ["Astral Black", "Astral Blue", "Astral Green", "Interstellar Grey", "Interstellar Green", "Celestial Red", "Celestial Blue"],
+        "Shotgun 650": ["Sheet Metal Grey", "Drill Green", "Stencil White", "Plasma Blue"],
+        "Bear 650": ["Broadwalk White", "Petrol Green and Wild Honey", "Golden Shadow", "Two Four Nine"],
+        "Classic 650": ["Hotrod", "Classic", "Chrome"],
+        "Guerrilla 450": ["Analogue", "Dash", "Flash"],
+        "Goan Classic 350": ["Single Tone", "Dual Tone"]
+    },
+
+    "Bajaj": {
+        "Pulsar 125": ["Drum", "Disc", "Split Seat"],
+        "Pulsar 150": ["Single Disc", "Twin Disc"],
+        "Pulsar N150": ["Single Channel ABS"],
+        "Pulsar N160": ["Single Channel ABS", "Dual Channel ABS"],
+        "Pulsar N250": ["Dual Channel ABS"],
+        "Pulsar NS125": ["Standard"],
+        "Pulsar NS160": ["Single Channel ABS", "Dual Channel ABS"],
+        "Pulsar NS200": ["Single Channel ABS", "Dual Channel ABS"],
+        "Pulsar NS400Z": ["Standard"],
+        "Pulsar F250": ["Single Channel ABS", "Dual Channel ABS"],
+        "Dominar 250": ["Standard"],
+        "Dominar 400": ["Standard"],
+        "Avenger 160 Street": ["Standard"],
+        "Avenger 220 Cruise": ["Standard"],
+        "CT 110X": ["Standard"],
+        "Platina 100": ["Drum"],
+        "Platina 110": ["ABS"]
+    },
+
+    "TVS": {
+        "Apache RTR 160": ["Drum", "Disc"],
+        "Apache RTR 160 4V": ["Standard", "Special Edition"],
+        "Apache RTR 180": ["Standard"],
+        "Apache RTR 200 4V": ["Standard", "Race Edition"],
+        "Apache RR 310": ["Standard", "BTO"],
+        "Raider 125": ["Drum", "Single Seat Disc", "Split Seat Disc", "SmartXonnect"],
+        "Ronin": ["SS", "DS", "TD", "TD Special Edition"],
+        "Sport": ["Kick Start", "Self Start"],
+        "Star City Plus": ["Drum", "Disc"]
+    },
+
+    "Hero": {
+        "Splendor Plus": ["Kick Start", "Self Start", "i3S"],
+        "Splendor Plus XTEC": ["Drum", "Disc"],
+        "HF Deluxe": ["Kick Start", "Self Start", "Self Start i3S"],
+        "HF 100": ["Standard"],
+        "Glamour": ["Drum", "Disc"],
+        "Glamour XTEC": ["Drum", "Disc"],
+        "Passion Plus": ["Standard"],
+        "Passion XTEC": ["Drum", "Disc"],
+        "Super Splendor": ["Drum", "Disc"],
+        "Super Splendor XTEC": ["Drum", "Disc"],
+        "Xtreme 125R": ["IBS", "ABS"],
+        "Xtreme 160R": ["Standard", "Stealth"],
+        "Xtreme 160R 4V": ["Standard", "Connected"],
+        "Xpulse 200 4V": ["Standard", "Pro"],
+        "Karizma XMR": ["Standard"],
+        "Mavrick 440": ["Base", "Mid", "Top"]
+    },
+
+    "Yamaha": {
+        "FZ-FI": ["Standard"],
+        "FZS-FI": ["Standard", "Deluxe"],
+        "FZ-X": ["Standard", "Chrome"],
+        "MT-15": ["Standard", "Deluxe"],
+        "R15S": ["Standard"],
+        "R15 V4": ["Standard"],
+        "R15M": ["Standard"],
+        "R3": ["Standard"],
+        "MT-03": ["Standard"]
+    },
+
+    "KTM": {
+        "200 Duke": ["Standard"],
+        "250 Duke": ["Standard"],
+        "390 Duke": ["Standard"],
+        "RC 125": ["Standard"],
+        "RC 200": ["Standard"],
+        "RC 390": ["Standard"],
+        "390 Adventure X": ["Standard"],
+        "390 Adventure": ["Standard", "S"],
+        "390 Enduro R": ["Standard"]
+    },
+
+    "Jawa": {
+        "Jawa 42": ["Standard"],
+        "Jawa 42 Bobber": ["Standard"],
+        "Jawa 350": ["Standard"],
+        "Perak": ["Standard"]
+    },
+
+    "Yezdi": {
+        "Roadster": ["Dark", "Chrome"],
+        "Scrambler": ["Standard"],
+        "Adventure": ["Standard"]
+    },
+
+    "Honda": {
+        "Shine 100": ["Standard"],
+        "SP125": ["Drum", "Disc"],
+        "Shine": ["Drum", "Disc"],
+        "Unicorn": ["Standard"],
+        "Hornet 2.0": ["Standard"],
+        "CB200X": ["Standard"],
+        "CB300F": ["Standard", "Deluxe"],
+        "CB300R": ["Standard"],
+        "CB300F Flex Fuel": ["Standard"],
+        "Hness CB350": ["DLX", "DLX Pro"],
+        "CB350RS": ["DLX", "DLX Pro"],
+        "CB350": ["DLX", "DLX Pro"],
+        "NX500": ["Standard"],
+        "XL750 Transalp": ["Standard"],
+        "CB650R": ["Standard"],
+        "CBR650R": ["Standard"],
+        "CRF1100L Africa Twin": ["Standard", "Adventure Sports"],
+        "Rebel 500": ["Standard"],
+        "Gold Wing": ["Tour"]
+    },
+
+    "BMW Motorrad": {
+        "G 310 R": ["Standard"],
+        "G 310 GS": ["Standard"],
+        "G 310 RR": ["Standard"],
+        "F 750 GS": ["Standard", "Pro"],
+        "F 850 GS": ["Standard", "Adventure"],
+        "F 900 R": ["Standard"],
+        "F 900 XR": ["Standard"],
+        "R 1250 GS": ["Standard", "Adventure"],
+        "R 1250 RT": ["Standard"],
+        "R 1250 R": ["Standard"],
+        "R 1250 RS": ["Standard"],
+        "S 1000 R": ["Standard"],
+        "S 1000 RR": ["Standard", "Pro", "M Sport"],
+        "S 1000 XR": ["Standard", "Pro"],
+        "M 1000 R": ["Standard"],
+        "M 1000 RR": ["Standard"],
+        "M 1000 XR": ["Standard"],
+        "K 1600 GT": ["Standard"],
+        "K 1600 B": ["Standard"]
+    },
+
+    "Kawasaki": {
+        "Ninja 300": ["Standard"],
+        "Ninja 400": ["Standard"],
+        "Ninja 500": ["Standard"],
+        "Ninja 650": ["Standard"],
+        "Ninja ZX-4R": ["Standard", "SE"],
+        "Ninja ZX-6R": ["Standard"],
+        "Ninja ZX-10R": ["Standard"],
+        "Ninja ZX-10RR": ["Standard"],
+        "Ninja H2 SX": ["Standard"],
+        "Ninja H2 SX SE": ["Standard"],
+        "Z400": ["Standard"],
+        "Z650": ["Standard"],
+        "Z650RS": ["Standard"],
+        "Z900": ["Standard"],
+        "Z900RS": ["Standard"],
+        "Z H2": ["Standard"],
+        "Versys 650": ["Standard"],
+        "Versys 1000": ["Standard"],
+        "Vulcan S": ["Standard"],
+        "W800": ["Standard"]
+    },
+    
+    "Suzuki": {        
+        "Gixxer": ["Standard"],
+        "Gixxer SF": ["Standard"],
+        "Gixxer SF 250": ["Standard"],
+        "Gixxer 250": ["Standard"],        
+        "V-Strom SX 250": ["Standard"],
+        "Gixxer SF 250 MotoGP Edition": ["Special Edition"],
+        "V-Strom 650XT": ["Standard"],
+        "V-Strom 800DE": ["Standard"],
+        "Katana": ["Standard"],
+        "Hayabusa": ["Standard"],
+        "GSX-S750": ["Standard"],
+        "GSX-S1000": ["Standard"],
+        "GSX-S1000GT": ["Standard"],
+        "GSX-R1000R": ["Standard"]
+    },
+
+    "Triumph": {
+        "Speed 400": ["Standard"],
+        "Scrambler 400 X": ["Standard"],
+        "Speed T4": ["Standard"],
+        "Street Triple R": ["Standard"],
+        "Street Triple RS": ["Standard"],
+        "Daytona 660": ["Standard"],
+        "Trident 660": ["Standard"],
+        "Tiger Sport 660": ["Standard"],
+        "Tiger 850 Sport": ["Standard"],
+        "Tiger 900 GT": ["Standard"],
+        "Tiger 900 Rally Pro": ["Standard"],
+        "Tiger 1200 GT Pro": ["Standard"],
+        "Tiger 1200 Rally Pro": ["Standard"],
+        "Tiger 1200 Rally Explorer": ["Standard"],
+        "Bonneville Speedmaster": ["Standard"],
+        "Bonneville Bobber": ["Standard"],
+        "Bonneville T100": ["Standard"],
+        "Bonneville T120": ["Standard"],
+        "Scrambler 900": ["Standard"],
+        "Scrambler 1200 X": ["Standard"],
+        "Scrambler 1200 XE": ["Standard"],
+        "Speed Twin 900": ["Standard"],
+        "Speed Twin 1200": ["Standard"],
+        "Speed Twin 1200 RS": ["Standard"],
+        "Speed Triple 1200 RS": ["Standard"],
+        "Rocket 3 R": ["Standard"],
+        "Rocket 3 GT": ["Standard"]
+    },
+
+    "Harley-Davidson": {
+        "X440": ["Denim", "Vivid", "S"],
+        "Nightster": ["Standard", "Special"],
+        "Nightster Special": ["Standard"],
+        "Sportster S": ["Standard"],
+        "Pan America 1250": ["Standard"],
+        "Pan America 1250 Special": ["Standard"],
+        "Fat Bob 114": ["Standard"],
+        "Fat Boy 114": ["Standard"],
+        "Breakout 117": ["Standard"],
+        "Heritage Classic": ["Standard"],
+        "Street Glide": ["Standard"],
+        "Road Glide": ["Standard"],
+        "Road King Special": ["Standard"]
+    },
+
+    "Indian": {
+        "FTR": ["Standard", "Sport", "R Carbon"],
+        "Scout Bobber": ["Standard"],
+        "Scout": ["Standard"],
+        "Scout Rogue": ["Standard"],
+        "Scout Sixty": ["Standard"],
+        "Chief Dark Horse": ["Standard"],
+        "Chief Bobber Dark Horse": ["Standard"],
+        "Super Chief Limited": ["Standard"],
+        "Chieftain Dark Horse": ["Standard"],
+        "Chieftain Limited": ["Standard"],
+        "Roadmaster": ["Standard"],
+        "Roadmaster Dark Horse": ["Standard"],
+        "Pursuit Dark Horse": ["Standard"],
+        "Pursuit Limited": ["Standard"],
+        "Springfield": ["Standard"],
+        "Springfield Dark Horse": ["Standard"],
+        "Challenger Dark Horse": ["Standard"],
+        "Challenger Limited": ["Standard"]
+    },
+
+    "Aprilia": {
+        "RS 457": ["Standard"],
+        "RS 660": ["Standard"],
+        "Tuono 457": ["Standard"],
+        "Tuono 660": ["Standard"],
+        "Tuono V4": ["Standard", "Factory"],
+        "RSV4": ["Standard", "Factory"],
+        "Tuareg 660": ["Standard"]
+    },
+
+    "Ducati": {
+        "Scrambler Icon": ["Standard"],
+        "Scrambler Full Throttle": ["Standard"],
+        "Scrambler Nightshift": ["Standard"],
+        "Monster": ["Standard", "SP"],
+        "Hypermotard 698 Mono": ["Standard", "RVE"],
+        "Hypermotard 950": ["Standard", "SP"],
+        "SuperSport 950": ["Standard", "S"],
+        "Panigale V2": ["Standard"],
+        "Panigale V4": ["Standard", "S", "SP2"],
+        "Streetfighter V2": ["Standard"],
+        "Streetfighter V4": ["Standard", "S", "SP2"],
+        "Multistrada V2": ["Standard", "S"],
+        "Multistrada V4": ["Standard", "S", "Pikes Peak", "Rally"],
+        "DesertX": ["Standard", "Rally"],
+        "Diavel V4": ["Standard"],
+        "XDiavel": ["Standard", "S"]
+    }
+
+
+  },
+
+  "Scooter": {
+    "Honda": {
+        "Activa": ["Standard", "Deluxe", "H-Smart"],
+        "Activa 125": ["Drum", "Disc", "H-Smart"],
+        "Dio": ["Standard", "Smart"],
+        "Dio 125": ["Standard", "Smart"],
+        "Grazia 125": ["Standard"],
+        "Activa e": ["Standard"],
+        "QC1": ["Standard"]
+    },
+
+    "TVS": {
+        "Jupiter": ["Drum", "ZX", "Classic"],
+        "Jupiter 125": ["Drum", "Disc"],
+        "Ntorq 125": ["Standard", "Race XP", "XT"],
+        "iQube": ["Standard", "S", "ST"]
+    },
+
+    "Suzuki": {
+        "Access 125": ["Drum", "Disc", "Ride Connect"],
+        "Burgman Street": ["Standard", "EX"],
+        "Avenis 125": ["Standard", "Ride Connect"]
+    },
+
+    "Yamaha": {
+        "RayZR 125": ["Standard", "Street Rally"],
+        "Fascino 125": ["Standard"]
+    },
+
+    "Ather": {
+        "450S": ["Standard"],
+        "450X": ["Standard", "Pro Pack"],
+        "Rizta": ["S", "Z"]
+    },
+
+    "Ola": {
+        "S1 X": ["2kWh", "3kWh", "4kWh"],
+        "S1 Air": ["Standard"],
+        "S1 Pro": ["Standard"],
+        "S1 Pro+": ["Standard"]
+    },
+
+    "Bajaj": {
+        "Chetak": ["Urbane", "Premium"]
+    },
+
+    "Hero": {
+        "Destini 125": ["VX", "ZX", "ZX+"],
+        "Xoom 110": ["LX", "VX", "ZX"],
+        "Xoom 125": ["Standard"],
+        "Vida V1": ["Plus", "Pro"]
+    },
+
+    "Simple": {
+        "One": ["Standard"]
+    },
+
+    "Aprilia": {
+        "SR 125": ["Standard"],
+        "SR 160": ["Standard", "Race"],
+        "SXR 125": ["Standard"],
+        "SXR 160": ["Standard"]
+    },
+
+    "Vespa": {
+        "VXL 125": ["Standard"],
+        "VXL 150": ["Standard"],
+        "SXL 125": ["Standard"],
+        "SXL 150": ["Standard"],
+        "ZX 125": ["Standard"],
+        "ZX 150": ["Standard"]
+    }
+  },
+
+  "Car": {
+    "Maruti Suzuki": {
+        "Alto K10": ["Std", "LXi", "VXi", "VXi+"],
+        "S-Presso": ["Std", "LXi", "VXi", "VXi+"],
+        "Celerio": ["LXi", "VXi", "ZXi", "ZXi+"],
+        "Wagon R": ["LXi", "VXi", "ZXi", "ZXi+"],
+        "Swift": ["LXi", "VXi", "ZXi", "ZXi+"],
+        "Dzire": ["LXi", "VXi", "ZXi", "ZXi+"],
+        "Ignis": ["Sigma", "Delta", "Zeta", "Alpha"],
+        "Baleno": ["Sigma", "Delta", "Zeta", "Alpha"],
+        "Fronx": ["Sigma", "Delta", "Delta+", "Zeta", "Alpha"],
+        "Brezza": ["LXi", "VXi", "ZXi", "ZXi+"],
+        "Ertiga": ["LXi", "VXi", "ZXi", "ZXi+"],
+        "XL6": ["Zeta", "Alpha", "Alpha+"],
+        "Grand Vitara": ["Sigma", "Delta", "Zeta", "Alpha", "Alpha+"],
+        "Jimny": ["Zeta", "Alpha"],
+        "Invicto": ["Zeta+", "Alpha+"]
+    },
+
+    "Hyundai": {
+        "Grand i10 Nios": ["Era", "Magna", "Sportz", "Asta"],
+        "i20": ["Era", "Magna", "Sportz", "Asta", "Asta(O)"],
+        "i20 N Line": ["N6", "N8"],
+        "Aura": ["E", "S", "SX", "SX(O)"],
+        "Exter": ["EX", "S", "SX", "SX(O)"],
+        "Venue": ["E", "S", "S(O)", "SX", "SX(O)"],
+        "Venue N Line": ["N6", "N8"],
+        "Creta": ["E", "EX", "S", "SX", "SX(O)"],
+        "Creta N Line": ["N8", "N10"],
+        "Alcazar": ["Prestige", "Platinum", "Signature"],
+        "Tucson": ["Platinum", "Signature"],
+        "Ioniq 5": ["Standard"]
+    },
+
+    "Tata": {
+        "Tiago": ["XE", "XM", "XT", "XZ"],
+        "Tiago EV": ["XE", "XT", "XZ+"],
+        "Tigor": ["XE", "XM", "XZ", "XZ+"],
+        "Tigor EV": ["XE", "XT", "XZ+"],
+        "Punch": ["Pure", "Adventure", "Accomplished", "Creative"],
+        "Punch EV": ["Smart", "Adventure", "Empowered"],
+        "Altroz": ["XE", "XM", "XT", "XZ", "XZ+"],
+        "Altroz Racer": ["R1", "R2", "R3"],
+        "Nexon": ["Smart", "Pure", "Creative", "Fearless"],
+        "Nexon EV": ["Creative", "Fearless", "Empowered"],
+        "Harrier": ["Smart", "Pure", "Adventure", "Fearless"],
+        "Safari": ["Smart", "Pure", "Adventure", "Accomplished"]
+    },
+
+    "Mahindra": {
+        "Bolero": ["B4", "B6", "B6(O)"],
+        "Bolero Neo": ["N4", "N8", "N10", "N10(O)"],
+        "Scorpio Classic": ["S", "S11"],
+        "Scorpio N": ["Z2", "Z4", "Z6", "Z8", "Z8L"],
+        "Thar": ["AX(O)", "LX"],
+        "Thar Roxx": ["MX1", "MX3", "AX3L", "AX5L", "AX7L"],
+        "XUV 3XO": ["MX1", "MX2", "MX3", "AX5", "AX7"],
+        "XUV700": ["MX", "AX3", "AX5", "AX7", "AX7L"],
+        "XUV400 EV": ["EC", "EL", "EL Pro"]
+    },
+
+    "Kia": {
+        "Sonet": ["HTE", "HTK", "HTK+", "HTX", "HTX+", "X-Line"],
+        "Seltos": ["HTE", "HTK", "HTK+", "HTX", "HTX+", "X-Line"],
+        "Carens": ["Premium", "Prestige", "Prestige Plus", "Luxury", "Luxury Plus", "X-Line"],
+        "Carens Clavis": ["HTE", "HTK", "HTX"],
+        "Carnival": ["Limousine", "Limousine Plus"],
+        "EV6": ["GT Line"]
+    },
+
+    "Toyota": {
+        "Glanza": ["E", "S", "G", "V"],
+        "Urban Cruiser Taisor": ["E", "S", "G", "V"],
+        "Urban Cruiser Hyryder": ["E", "S", "G", "V"],
+        "Rumion": ["S", "G", "V"],
+        "Innova Crysta": ["GX", "VX", "ZX"],
+        "Innova Hycross": ["G", "GX", "VX", "ZX", "ZX(O)"],
+        "Hilux": ["STD", "High"],
+        "Fortuner": ["4x2", "4x4", "Legender"],
+        "Land Cruiser 300": ["ZX", "GR-S"]
+    },
+
+    "Honda": {
+        "Amaze": ["E", "S", "VX", "ZX"],
+        "City": ["SV", "V", "VX", "ZX"],
+        "City Hybrid": ["V", "ZX"],
+        "Elevate": ["SV", "V", "VX", "ZX"]
+    },
+
+    "MG": {
+        "Comet EV": ["Executive", "Excite", "Exclusive"],
+        "Astor": ["Sprint", "Shine", "Select", "Sharp", "Savvy"],
+        "ZS EV": ["Excite", "Exclusive", "Essence"],
+        "Hector": ["Style", "Shine", "Smart", "Sharp", "Savvy"],
+        "Hector Plus": ["Style", "Select", "Smart", "Sharp", "Savvy"],
+        "Gloster": ["Sharp", "Savvy"]
+    },
+
+    "Skoda": {
+        "Slavia": ["Active", "Ambition", "Style"],
+        "Kushaq": ["Active", "Ambition", "Style", "Monte Carlo"],
+        "Kylaq": ["Classic", "Signature", "Prestige"],
+        "Kodiaq": ["Style", "L&K"]
+    },
+
+    "Volkswagen": {
+        "Polo": ["Trendline", "Comfortline", "Highline", "GT"],
+        "Virtus": ["Comfortline", "Highline", "GT Plus"],
+        "Taigun": ["Comfortline", "Highline", "GT Line", "GT Plus"],
+        "Tiguan": ["Elegance"]
+    },
+
+    "Renault": {
+        "Kwid": ["RXE", "RXL", "RXT", "Climber"],
+        "Triber": ["RXE", "RXL", "RXT", "RXZ"],
+        "Kiger": ["RXE", "RXL", "RXT", "RXZ"]
+    },
+
+    "Nissan": {
+        "Magnite": ["Visia", "Visia Plus", "Acenta", "N-Connecta", "Tekna"]
+    },
+
+    "Citroen": {
+        "C3": ["Live", "Feel", "Shine"],
+        "e-C3": ["Live", "Feel"],
+        "C3 Aircross": ["You", "Plus", "Max"],
+        "Basalt": ["You", "Plus", "Max"]
+    },
+
+    "Mercedes-Benz": {
+        "A-Class Limousine": ["Progressive", "AMG Line"],
+        "C-Class": ["C200", "C300"],
+        "E-Class": ["E200", "E220d", "E350d"],
+        "S-Class": ["S350d", "S450"],
+        "GLA": ["200", "220d"],
+        "GLB": ["200", "220d"],
+        "GLC": ["300"],
+        "GLE": ["300d", "450"],
+        "GLS": ["400d"],
+        "EQB": ["300", "350"],
+        "EQS": ["580"],
+        "AMG GT": ["63"]
+    },
+
+    "BMW": {
+        "2 Series Gran Coupe": ["220i"],
+        "3 Series": ["330i", "M340i"],
+        "5 Series": ["530i"],
+        "7 Series": ["740i"],
+        "X1": ["sDrive18i", "sDrive18d"],
+        "X3": ["xDrive30i", "M40i"],
+        "X5": ["xDrive40i", "xDrive30d"],
+        "X7": ["xDrive40i", "xDrive40d"],
+        "i4": ["eDrive35", "eDrive40"],
+        "i7": ["xDrive60"],
+        "XM": ["Standard"]
+    },
+
+    "Audi": {
+        "A4": ["Premium", "Technology"],
+        "A6": ["Premium Plus", "Technology"],
+        "A8L": ["Technology"],
+        "Q3": ["Premium Plus", "Technology"],
+        "Q3 Sportback": ["Technology"],
+        "Q5": ["Premium Plus", "Technology"],
+        "Q7": ["Premium Plus", "Technology"],
+        "Q8": ["Celebration"],
+        "e-tron GT": ["Standard", "RS"]
+    },
+
+    "Land Rover": {
+        "Range Rover Evoque": ["S", "Dynamic SE"],
+        "Range Rover Velar": ["Dynamic SE"],
+        "Range Rover Sport": ["Dynamic SE", "Autobiography"],
+        "Range Rover": ["SE", "Autobiography"],
+        "Defender": ["90", "110", "130"],
+        "Discovery Sport": ["Dynamic SE"],
+        "Discovery": ["SE", "HSE"]
+    },
+
+    "Jeep": {
+        "Compass": ["Sport", "Longitude", "Limited", "Model S"],
+        "Meridian": ["Limited", "Overland"],
+        "Wrangler": ["Unlimited"],
+        "Grand Cherokee": ["Limited"]
+    },
+
+    "BYD": {
+        "Atto 3": ["Dynamic", "Premium"],
+        "Seal": ["Dynamic", "Premium", "Performance"],
+        "e6": ["Standard"]
+    },
+
+    "Porsche": {
+        "Macan": ["Standard", "S", "GTS"],
+        "Cayenne": ["Standard", "Coupe"],
+        "Panamera": ["Standard"],
+        "911": ["Carrera", "Carrera S", "Turbo"],
+        "Taycan": ["Standard", "4S", "Turbo"]
+    },
+
+    "Volvo": {
+        "XC40": ["B4 Ultimate"],
+        "XC60": ["B5 Ultimate"],
+        "XC90": ["B6 Ultimate"],
+        "C40 Recharge": ["Ultimate"],
+        "EX30": ["Standard"]
+    },
+
+    "Lexus": {
+        "ES": ["300h Luxury", "300h Ultra Luxury"],
+        "NX": ["350h Luxury", "350h F Sport"],
+        "RX": ["350h Luxury", "500h F Sport"],
+        "LM": ["350h"],
+        "LX": ["500d"]
+    },
+
+    "Mini": {
+        "Cooper 3 Door": ["Standard", "S"],
+        "Cooper 5 Door": ["Standard"],
+        "Countryman": ["S"],
+        "Electric": ["SE"]
+    },
+
+    "Lamborghini": {
+        "Huracan": ["EVO", "STO"],
+        "Urus": ["S", "Performante"],
+        "Revuelto": ["Standard"]
+    },
+
+    "Force Motors": {
+        "Gurkha": ["3 Door", "5 Door"]
+    },
+
+    "Ferrari": {
+        "Roma": ["Standard"],
+        "296 GTB": ["Standard"],
+        "296 GTS": ["Standard"],
+        "SF90 Stradale": ["Standard"],
+        "SF90 Spider": ["Standard"],
+        "Purosangue": ["Standard"]
+    },
+
+    "Jaguar": {
+        "F-Pace": ["R-Dynamic S"],
+        "I-Pace": ["S", "SE", "HSE"]
+    },
+
+    "Rolls-Royce": {
+        "Ghost": ["Standard", "Extended"],
+        "Phantom": ["Standard", "Extended"],
+        "Cullinan": ["Standard", "Black Badge"],
+        "Spectre": ["Standard"]
+    },
+
+    "Isuzu": {
+        "D-Max V-Cross": ["Z", "Z Prestige"],
+        "Hi-Lander": ["Standard"],
+        "MU-X": ["4x2", "4x4"]
+    }
+
+  },
+
+    "Truck": {
+        "Tata": {
+            "Ace": ["Gold Diesel", "Gold Petrol", "EV"],
+            "Intra": ["V10 Petrol", "V20 Diesel", "V30 Diesel", "V50 Diesel"],
+            "407": ["Standard Diesel"],
+            "709": ["Standard Diesel"],
+            "1109": ["Standard Diesel"],
+            "1512": ["Standard Diesel"],
+            "1613": ["Standard Diesel"],
+            "Signa Series": ["Diesel"],
+            "Prima Series": ["Diesel"]
+        },
+
+        "Ashok Leyland": {
+            "Dost": ["Lite Diesel", "Strong Diesel", "XL Diesel"],
+            "Bada Dost": ["i2 Diesel", "i3 Diesel", "i4 Diesel", "i5 Diesel"],
+            "Partner": ["Standard Diesel"],
+            "Ecomet": ["Standard Diesel"],
+            "Boss": ["Standard Diesel"],
+            "Captain": ["Standard Diesel"],
+            "AVTR Series": ["Diesel"]
+        },
+
+        "Mahindra": {
+            "Jeeto": ["Diesel", "Petrol", "EV"],
+            "Supro Maxitruck": ["Diesel"],
+            "Bolero Pickup": ["Standard Diesel", "Extra Long Diesel", "City Diesel"],
+            "Furio": ["Diesel"],
+            "Blazo X": ["Diesel"]
+        },
+
+        "Eicher": {
+            "Pro 2049": ["Diesel"],
+            "Pro 2055": ["Diesel"],
+            "Pro 2080": ["Diesel"],
+            "Pro 3015": ["Diesel"],
+            "Pro 6019": ["Diesel"],
+            "Pro 6035": ["Diesel"]
+        },
+
+        "BharatBenz": {
+            "1015": ["Diesel"],
+            "1217": ["Diesel"],
+            "1415": ["Diesel"],
+            "1617": ["Diesel"],
+            "1923": ["Diesel"],
+            "2823": ["Diesel"],
+            "3523": ["Diesel"],
+            "4023": ["Diesel"]
+        }
+    },
+
+    "Bus": {
+        "Tata": {
+            "Starbus": ["School Diesel", "School CNG", "City Diesel", "City CNG", "Staff Diesel"],
+            "Ultra": ["Standard Diesel", "Luxury Diesel", "School Diesel"],
+            "LP 912": ["School Diesel", "Staff Diesel"],
+            "LP 1512": ["City Diesel", "Intercity Diesel"],
+            "Electric Starbus": ["City EV"]
+        },
+
+        "Ashok Leyland": {
+            "Viking": ["Standard Diesel", "School Diesel"],
+            "Falcon": ["Standard Diesel", "Intercity Diesel"],
+            "Lynx": ["City Diesel"],
+            "Janbus": ["City EV"],
+            "Circuit": ["City EV"]
+        },
+
+        "Eicher": {
+            "Skyline": ["School Diesel", "Staff Diesel", "Intercity Diesel"],
+            "Pro 2049": ["School Diesel", "Staff Diesel"],
+            "Pro 2095": ["School Diesel", "Staff Diesel"],
+            "Skyline Pro": ["Luxury Diesel"]
+        },
+
+        "Volvo": {
+            "9400": ["Intercity Diesel", "Luxury Diesel"],
+            "9600": ["Sleeper Diesel", "Luxury Diesel"],
+            "8400": ["City Diesel"]
+        },
+
+        "Scania": {
+            "Metrolink": ["Luxury Diesel"],
+            "Citywide": ["City Diesel"]
+        },
+
+        "Olectra": {
+            "K6": ["City EV"],
+            "K7": ["City EV"],
+            "CX2": ["Intercity EV"]
+        },
+
+        "BYD": {
+            "K9": ["City EV"],
+            "K7": ["City EV"]
+        }
+    },
+
+    "Vans": {
+        "Force": {
+            "Traveller": ["9 Seater Diesel", "12 Seater Diesel", "17 Seater Diesel", "26 Seater Diesel"],
+            "Urbania": ["10 Seater Diesel", "13 Seater Diesel", "17 Seater Diesel"]
+        },
+        "Tata": {
+            "Winger": ["Cargo Diesel", "Tourist Diesel", "Staff Diesel"]
+        },
+        "Mahindra": {
+            "Supro Van": ["Standard Diesel"]
+        }
+    }
+}

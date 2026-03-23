@@ -1,0 +1,1023 @@
+{
+  "Motorcycle": {
+    "Hero": {
+      "Splendor": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "HF Deluxe": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Xtreme 160R": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Xpulse 200": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Karizma": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ]
+    },
+    "Bajaj": {
+      "Pulsar 125": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Pulsar 150": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Pulsar NS200": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Pulsar N250": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Dominar 400": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ]
+    },
+    "TVS": {
+      "Apache RTR 160": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Apache RTR 200": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Ronin": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Apache RR310": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ]
+    },
+    "Royal Enfield": {
+      "Classic 350": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Hunter 350": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Meteor 350": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Bullet 350": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Interceptor 650": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ]
+    },
+    "Yamaha": {
+      "FZ": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "MT15": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "R15": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "FZX": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ]
+    },
+    "KTM": {
+      "125 Duke": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "200 Duke": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "250 Duke": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "390 Duke": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "RC 390": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ]
+    },
+    "Honda": {
+      "Shine": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "Hornet 2.0": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "CB350": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ],
+      "CB300R": [
+        "Variant Standard",
+        "Variant Pro",
+        "Variant Sport",
+        "Variant Touring",
+        "Variant Limited"
+      ]
+    }
+  },
+  "Scooter": {
+    "Honda": {
+      "Activa": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ],
+      "Dio": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ],
+      "Grazia": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ]
+    },
+    "TVS": {
+      "Jupiter": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ],
+      "Ntorq": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ],
+      "Zest": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ]
+    },
+    "Suzuki": {
+      "Access 125": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ],
+      "Burgman Street": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ],
+      "Avenis": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ]
+    },
+    "Yamaha": {
+      "RayZR": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ],
+      "Fascino": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ]
+    },
+    "Ola": {
+      "S1": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ],
+      "S1 Pro": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ]
+    },
+    "Ather": {
+      "450X": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ],
+      "450S": [
+        "Trim Standard",
+        "Trim Pro",
+        "Trim Sport",
+        "Trim Touring",
+        "Trim Limited"
+      ]
+    }
+  },
+  "Car": {
+    "Maruti Suzuki": {
+      "Alto K10": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Swift": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Baleno": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Brezza": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Grand Vitara": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Ertiga": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Fronx": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "Hyundai": {
+      "i10 Nios": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "i20": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Venue": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Creta": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Alcazar": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Verna": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Tucson": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "Tata": {
+      "Tiago": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Tigor": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Punch": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Altroz": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Nexon": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Harrier": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Safari": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "Mahindra": {
+      "Bolero": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Thar": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "XUV300": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "XUV700": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Scorpio N": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "Kia": {
+      "Sonet": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Seltos": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Carens": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "EV6": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "Toyota": {
+      "Glanza": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Urban Cruiser Hyryder": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Innova Hycross": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Fortuner": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "MG": {
+      "Hector": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Astor": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "ZS EV": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Comet EV": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "Skoda": {
+      "Slavia": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Kushaq": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Superb": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "Volkswagen": {
+      "Virtus": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Taigun": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Tiguan": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "BMW": {
+      "3 Series": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "5 Series": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "7 Series": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "X3": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "X5": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "M4": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "Mercedes-Benz": {
+      "C-Class": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "E-Class": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "S-Class": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "GLA": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "GLE": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "AMG C63": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "Audi": {
+      "A4": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "A6": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Q3": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Q5": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "RS5": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    },
+    "Porsche": {
+      "911": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Cayenne": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Macan": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ],
+      "Taycan": [
+        "Edition Standard",
+        "Edition Pro",
+        "Edition Sport",
+        "Edition Touring",
+        "Edition Limited"
+      ]
+    }
+  },
+  "Truck": {
+    "Tata": {
+      "Ace": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Intra V30": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Intra V50": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "407": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "709": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ]
+    },
+    "Ashok Leyland": {
+      "Dost": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Bada Dost": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Partner": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Ecomet": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ]
+    },
+    "Mahindra": {
+      "Jeeto": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Bolero Pickup": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Supro": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ]
+    },
+    "Eicher": {
+      "Pro 2049": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Pro 3015": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Pro 6048": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ]
+    }
+  },
+  "Bus": {
+    "Tata": {
+      "Starbus": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Ultra Bus": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "LPO": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ]
+    },
+    "Ashok Leyland": {
+      "Viking": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Falcon": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Lynx": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ]
+    },
+    "Eicher": {
+      "Skyline": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ],
+      "Pro Bus": [
+        "Config Standard",
+        "Config Pro",
+        "Config Sport",
+        "Config Touring",
+        "Config Limited"
+      ]
+    }
+  }
+}
