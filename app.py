@@ -7,11 +7,10 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 # Load environment variables
-#load_dotenv()
+load_dotenv()
 
 # Get token
-#token = os.getenv("GITHUB_TOKEN")
-token = st.secrets["GITHUB_TOKEN"]
+token = os.getenv("GITHUB_TOKEN")
 
 st.set_page_config(
     page_title="AI Drag Race Simulator",
