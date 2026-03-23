@@ -10,7 +10,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Get token
-token = os.getenv("GITHUB_TOKEN")
+# token = os.getenv("GITHUB_TOKEN")
+try:
+    token = st.secrets["GITHUB_TOKEN"]
+except:
+    token = None
 
 st.set_page_config(
     page_title="AI Drag Race Simulator",
@@ -22,7 +26,7 @@ st.caption("Select two vehicles and simulate a quarter-mile drag race using AI."
 
 # Check if token exists
 if not token:
-    st.error("❌ GITHUB_TOKEN not found. Please check your .env file.")
+    st.error("❌ GITHUB_TOKEN not found. Please check Streamlit Secrets.")
     st.stop()
 
 if "race_result" not in st.session_state:
