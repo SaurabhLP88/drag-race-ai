@@ -12,7 +12,7 @@ load_dotenv()
 # Get token
 # token = os.getenv("GITHUB_TOKEN")
 try:
-    token = st.secrets["GITHUB_TOKEN"]
+    token = os.getenv("GITHUB_TOKEN") or st.secrets.get("GITHUB_TOKEN")
 except:
     token = None
 
@@ -44,9 +44,22 @@ if "vehicle1" not in st.session_state:
 if "vehicle2" not in st.session_state:
     st.session_state.vehicle2 = None
 
+if "animation_played" not in st.session_state:
+    st.session_state.animation_played = False
+
+if "last_vehicle1" not in st.session_state:
+    st.session_state.last_vehicle1 = None
+
+if "last_vehicle2" not in st.session_state:
+    st.session_state.last_vehicle2 = None
+
 # Load Indian vehicle dataset
-with open("vehicles_india.json", "r", encoding="utf-8") as f:
-    vehicles = json.load(f)
+@st.cache_data
+def load_data():
+    with open("vehicles_india.json", "r", encoding="utf-8") as f:
+        return json.load(f)
+
+vehicles = load_data()
 
 def extract_times(text):
 
@@ -62,34 +75,39 @@ def vehicle_selector(label):
     st.subheader(label)
 
     v_type = st.selectbox(
-        "Vehicle Type",
+        "Type",
         list(vehicles.keys()),
         key=label + "_type"
     )
 
     brands = list(vehicles[v_type].keys())
 
-    brand = st.selectbox(
-        "Brand",
-        brands,
-        key=label + "_brand"
-    )
+    col1, col2, col3 = st.columns(3)
+
+    with col1:
+        brand = st.selectbox(
+            "Brand",
+            brands,
+            key=label + "_brand"
+        )
 
     models = list(vehicles[v_type][brand].keys())
 
-    model = st.selectbox(
-        "Model",
-        models,
-        key=label + "_model"
-    )
+    with col2:
+        model = st.selectbox(
+            "Model",
+            models,
+            key=label + "_model"
+        )
 
     variants = vehicles[v_type][brand][model]
 
-    variant = st.selectbox(
-        "Variant",
-        variants,
-        key=label + "_variant"
-    )
+    with col3:
+        variant = st.selectbox(
+            "Variant",
+            variants,
+            key=label + "_variant"
+        )
 
     vehicle_name = f"{brand} {model} {variant}"
 
@@ -113,7 +131,8 @@ def run_animation(vehicle1, vehicle2, time1, time2):
     rerun = st.button("🔁 Rerun Animation")
 
     if rerun:
-        st.rerun()
+        st.session_state.animation_played = False
+        return
 
     track1 = st.empty()
     track2 = st.empty()
@@ -152,6 +171,10 @@ if simulate:
         base_url="https://models.github.ai/inference",
         api_key=token
     )
+
+    st.session_state.animation_played = False
+    st.session_state.last_vehicle1 = vehicle1
+    st.session_state.last_vehicle2 = vehicle2
 
     prompt = f"""
     You are an automotive performance analyst.
@@ -207,6 +230,10 @@ if simulate:
 with right:
     if st.session_state.race_result:
 
+        if (vehicle1 != st.session_state.last_vehicle1 or 
+            vehicle2 != st.session_state.last_vehicle2):
+            st.stop()
+
         vehicle1 = st.session_state.vehicle1
         vehicle2 = st.session_state.vehicle2
         time1 = st.session_state.time1
@@ -240,7 +267,9 @@ with right:
         # ANIMATION
         # -----------------------------
 
-        run_animation(vehicle1, vehicle2, time1, time2)
+        if not st.session_state.animation_played:
+            run_animation(vehicle1, vehicle2, time1, time2)
+            st.session_state.animation_played = True
 
         # -----------------------------
         # AI ANALYSIS LAST
