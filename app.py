@@ -115,6 +115,10 @@ st.markdown(f"""
         background: linear-gradient(90deg, #ff0000, #ff4b2b) !important;
         border-radius: 12px !important; height: 20px !important;
     }}
+
+    div[data-testid="stProgress"] [role="progressbar"] > div > div > div {{
+        background-color: #fff !important;
+    }}
     
     </style>
 """, unsafe_allow_html=True)
@@ -421,7 +425,7 @@ if st.session_state.race_result:
         <h2 class="card-title">🏁 Race Result</h2>
         <h3 style="color:white; text-align:center;">
             {vehicle1} 
-            <span style="margin:0 10px; vertical-align:middle;"><img src="data:image/gif;base64,{vs_image}" alt="VS" style="max-height:75px" /></span> 
+            <span style="margin: 10px 0; vertical-align:middle; display:block;"><img src="data:image/gif;base64,{vs_image}" alt="VS" style="max-height:75px" /></span> 
             {vehicle2}
         </h3>
     </div>
