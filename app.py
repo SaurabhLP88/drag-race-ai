@@ -1,10 +1,9 @@
-import os
+import asyncio
+from copilot import CopilotClient
 import streamlit as st
 import json
 import re
 import time
-from openai import OpenAI
-from dotenv import load_dotenv
 import base64
 
 def get_base64_image(image_path):
@@ -12,18 +11,17 @@ def get_base64_image(image_path):
         return base64.b64encode(img.read()).decode()
 
 # Convert images to base64
-bg_image = get_base64_image("images/sunshine-01.jpg")
-vs_image = get_base64_image("images/versus-01.png")
-
-# Load environment variables
-load_dotenv()
-
-# Get token
-# token = os.getenv("GITHUB_TOKEN")
 try:
-    token = os.getenv("GITHUB_TOKEN") or st.secrets.get("GITHUB_TOKEN")
-except:
-    token = None
+    bg_image = get_base64_image("images/sunshine-01.jpg")
+    vs_image = get_base64_image("images/versus-01.png")
+
+except FileNotFoundError as e:
+    st.error(f"Required image file not found: {e.filename}")
+    st.stop()
+
+except OSError as e:
+    st.error(f"Could not read an image file: {e}")
+    st.stop()
 
 st.set_page_config(
     page_title="AI Drag Race Simulator",
@@ -50,6 +48,16 @@ st.markdown(f"""
             
     [data-testid="stWidgetLabel"] {{
         color: black;
+    }}
+
+    [data-testid="stHeading"] h1 {{
+        font-size:3.2rem; font-weight: 900;
+    }}
+
+    @media (max-width: 767.98px) {{
+        [data-testid="stHeading"] h1 {{
+            font-size:2.2rem;
+        }}
     }}
             
     /* Add dark overlay */
@@ -83,6 +91,31 @@ st.markdown(f"""
         border-radius: 12px;
         border: 1px solid rgba(255,255,255,0.2);
     }}
+
+    .card-body {{
+        color:white; text-align:center; font-size: 2.4rem; font-weight: 900;
+    }}
+
+    .card table th,
+    .card table td {{
+        padding: 5px;
+    }}
+
+    @media (max-width: 1199.98px) {{
+        .card-body {{
+            font-size: 1rem;
+        }}
+    }}
+
+    .vs-style {{margin: 10px 0; vertical-align:middle; display:inline-block; }}
+
+    @media (max-width: 767.98px) {{
+        .vs-style {{
+            display: block;
+        }}
+    }}
+    
+    .vs-style img {{ max-height:75px }}
             
     div[data-testid="stLayoutWrapper"] > div:has(.card-wrapper) {{
         background: rgba(255,0,0,0.9); color: white;
@@ -91,6 +124,10 @@ st.markdown(f"""
         border: 1px solid rgba(255,255,255,0.2);
         margin-bottom: 20px;
     }}
+
+    /*div[data-testid="stLayoutWrapper"] > .stHorizontalBlock > .stColumn {{
+        min-width: initial !important;
+    }}*/
 
     /* REMOVE default padding/extra wrapper */
     div[data-testid="stProgress"] > div:first-child {{
@@ -119,17 +156,110 @@ st.markdown(f"""
     div[data-testid="stProgress"] [role="progressbar"] > div > div > div {{
         background-color: #fff !important;
     }}
+
+    
+    /* ==================================
+    VEHICLE SELECTOR PARENT CONTAINERS
+    ================================== */
+
+    .st-key-vehicle-1-card,
+    .st-key-vehicle-2-card {{
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        /*padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 12px;
+        background: rgba(249, 189, 101, 0.5);*/
+    }}
+
+    /* Child row containers */
+    .st-key-vehicle-1-row-one,
+    .st-key-vehicle-1-row-two,
+    .st-key-vehicle-2-row-one,
+    .st-key-vehicle-2-row-two {{
+        width: 100%;
+        min-width: 0;
+    }}
+
+    /* Ensure each selectbox fills its column */
+    .st-key-vehicle-1-card [data-testid="stSelectbox"],
+    .st-key-vehicle-2-card [data-testid="stSelectbox"] {{
+        width: 100%;
+        min-width: 0;
+    }}
+
+    /* Keep column contents from overflowing */
+    .st-key-vehicle-1-card [data-testid="stColumn"],
+    .st-key-vehicle-2-card [data-testid="stColumn"] {{
+        min-width: 0;
+    }}
+
+    /* ==================================
+    TABLET
+    ================================== */
+
+    @media (max-width: 900px) {{
+        .st-key-vehicle-1-card,
+        .st-key-vehicle-2-card {{
+            padding: 15px;
+        }}
+    }}
+
+    /* ==================================
+    MOBILE
+    ================================== */
+
+    @media (max-width: 600px) {{
+        .st-key-vehicle-1-card,
+        .st-key-vehicle-2-card {{
+            padding: 12px;
+        }}
+
+        .st-key-vehicle-1-row-one [data-testid="stHorizontalBlock"],
+        .st-key-vehicle-1-row-two [data-testid="stHorizontalBlock"],
+        .st-key-vehicle-2-row-one [data-testid="stHorizontalBlock"],
+        .st-key-vehicle-2-row-two [data-testid="stHorizontalBlock"] {{
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }}
+
+        .st-key-vehicle-1-row-one [data-testid="stColumn"],
+        .st-key-vehicle-1-row-two [data-testid="stColumn"],
+        .st-key-vehicle-2-row-one [data-testid="stColumn"],
+        .st-key-vehicle-2-row-two [data-testid="stColumn"] {{
+            flex: 1 1 100%;
+            width: 100%;
+        }}
+    }}
+
+    /* Outer two-vehicle layout */
+    .st-key-vehicle-comparison-layout {{
+        width: 100%;
+        min-width: 0;
+    }}
+
+    .st-key-vehicle-comparison-layout [data-testid="stColumn"] {{
+        min-width: 0;
+    }}
+
+    @media (max-width: 600px) {{
+        .st-key-vehicle-comparison-layout [data-testid="stHorizontalBlock"] {{
+            flex-wrap: wrap;
+        }}
+
+        .st-key-vehicle-comparison-layout [data-testid="stColumn"] {{
+            flex: 1 1 100%;
+            width: 100%;
+        }}
+    }}
+
     
     </style>
 """, unsafe_allow_html=True)
 
-st.title("🏁 AI Drag Race Simulator")
+st.title("🏁 Virtual Drag Race")
 st.caption("Select two vehicles and simulate a quarter-mile drag race using AI.")
-
-# Check if token exists
-if not token:
-    st.error("❌ GITHUB_TOKEN not found. Please check Streamlit Secrets.")
-    st.stop()
 
 if "race_result" not in st.session_state:
     st.session_state.race_result = None
@@ -164,12 +294,34 @@ if "locked" not in st.session_state:
 #})
 
 # Load Indian vehicle dataset
+
 @st.cache_data
 def load_data():
     with open("vehicles_india.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
-vehicles = load_data()
+try:
+    vehicles = load_data()
+
+    if not isinstance(vehicles, dict) or not vehicles:
+        st.error("Vehicle data must be a non-empty JSON object.")
+        st.stop()
+
+except FileNotFoundError:
+    st.error(
+        "vehicles_india.json was not found. "
+        "Place it in the project directory."
+    )
+    st.stop()
+
+except json.JSONDecodeError as e:
+    st.error(f"Invalid JSON in vehicles_india.json: {e}")
+    st.stop()
+
+except OSError as e:
+    st.error(f"Could not read vehicle data: {e}")
+    st.stop()
+
 
 def parse_analysis_to_table(text, vehicle1, vehicle2):
 
@@ -212,61 +364,93 @@ def extract_times(text, vehicle1, vehicle2):
 
     return time1, time2
 
+
+async def _ask_copilot_async(prompt: str) -> str:
+    client = CopilotClient()
+
+    try:
+        await client.start()
+
+        session = await client.create_session(model="auto")
+
+        response = await session.send_and_wait(prompt)
+        result = response.data.content
+
+        if not isinstance(result, str) or not result.strip():
+            raise RuntimeError(
+                "GitHub Copilot returned an empty response."
+            )
+
+        return result.strip()
+
+    finally:
+        await client.stop()
+
+
+def ask_copilot(prompt: str) -> str:
+    return asyncio.run(_ask_copilot_async(prompt))
+
+
 def vehicle_selector(label):
+    with st.container(key=f"{label.lower().replace(' ', '-')}-card"):
+        st.subheader(label)
 
-    st.subheader(label)    
+        # Parent container for the first row
+        with st.container(key=f"{label.lower().replace(' ', '-')}-row-one"):
+            rowcol1, rowcol2 = st.columns(2)
 
-    rowcol1, row1col2 = st.columns(2)
-    row2col1, row2col2 = st.columns(2)
+            with rowcol1:
+                v_type = st.selectbox(
+                    "Type",
+                    list(vehicles.keys()),
+                    key=label + "_type"
+                )
 
-    with rowcol1:
-        v_type = st.selectbox(
-            "Type",
-            list(vehicles.keys()),
-            key=label + "_type"
-        )
+            brands = list(vehicles[v_type].keys())
 
-    brands = list(vehicles[v_type].keys())
+            with rowcol2:
+                brand = st.selectbox(
+                    "Brand",
+                    brands,
+                    key=label + "_brand"
+                )
 
-    with row1col2:
-        brand = st.selectbox(
-            "Brand",
-            brands,
-            key=label + "_brand"
-        )
+        # Parent container for the second row
+        with st.container(key=f"{label.lower().replace(' ', '-')}-row-two"):
+            row2col1, row2col2 = st.columns(2)
 
-    models = list(vehicles[v_type][brand].keys())
+            with row2col1:
+                models = list(vehicles[v_type][brand].keys())
 
-    with row2col1:
-        model = st.selectbox(
-            "Model",
-            models,
-            key=label + "_model"
-        )
+                model = st.selectbox(
+                    "Model",
+                    models,
+                    key=label + "_model"
+                )
 
-    variants = vehicles[v_type][brand][model]
+            with row2col2:
+                variants = vehicles[v_type][brand][model]
 
-    with row2col2:
-        variant = st.selectbox(
-            "Variant",
-            variants,
-            key=label + "_variant"
-        )
+                variant = st.selectbox(
+                    "Variant",
+                    variants,
+                    key=label + "_variant"
+                )
 
-    vehicle_name = f"{brand} {model} {variant}"
+    return f"{brand} {model} {variant}"
 
-    return vehicle_name
 
 # User inputs
 #left, right = st.columns([1,1])
 
-col1, col2 = st.columns(2)
+with st.container(key="vehicle-comparison-layout"):
+    col1, col2 = st.columns(2)
 
-with col1:
-    vehicle1 = vehicle_selector("Vehicle 1")
+    with col1:
+        vehicle1 = vehicle_selector("Vehicle 1")
 
-with col2:
-    vehicle2 = vehicle_selector("Vehicle 2")
+    with col2:
+        vehicle2 = vehicle_selector("Vehicle 2")
 
 simulate = st.button("🚀 Simulate Drag Race", use_container_width=True)
 
@@ -344,58 +528,122 @@ if simulate:
     # Prevent empty inputs
     if not vehicle1 or not vehicle2:
         st.warning("Please enter both vehicles.")
-        st.stop()
-
-    client = OpenAI(
-        base_url="https://models.github.ai/inference",
-        api_key=token
-    )
-
+        st.stop() 
+        
     prompt = f"""
-    You are an automotive performance analyst.
+    You are **Virtual Drag Race 🏁**, an expert automotive performance analyst
+    and drag-racing commentator.
 
-    Simulate a realistic quarter-mile drag race.
+    Analyze a hypothetical **quarter-mile drag race (402.3 metres)**
+    between the following vehicles:
 
-    Vehicle 1: {vehicle1} 
-    Vehicle 2: {vehicle2}
+    - 🏎️ **Vehicle 1:** {vehicle1}
+    - 🏎️ **Vehicle 2:** {vehicle2}
 
-    Steps:
-    1. Identify accurate engine specs
-    2. Estimate power, torque, and weight
-    3. Estimate 0-60 mph and 0-100 km/h acceleration
-    4. Calculate power-to-weight ratio
-    5. Estimate quarter mile time
-    6. Predict the winner
+    ## 🎯 YOUR OBJECTIVES
 
-    Output format:
+    1. Estimate engine power, torque, and kerb weight.
+    2. Estimate 0–60 km/h and 0–100 km/h acceleration times.
+    3. Calculate power-to-weight ratio.
+    4. Estimate quarter-mile elapsed time.
+    5. Compare the vehicles and declare a winner.
+    6. Explain the result using technical reasoning.
 
-    Performance
-    Power
-    Torque
-    Weight
-    Power-to-weight ratio
+    ## 📋 OUTPUT FORMAT
 
-    Timings
-    0-60 km/h
-    0-100 km/h
-    Quarter Mile Results
-    {vehicle1} Time: XX.X seconds
-    {vehicle2} Time: XX.X seconds
+    Follow the Markdown structure below exactly. Use readable tables,
+    bold highlights, and relevant emojis. Do not output HTML.
 
-    Winner
-    Reason
-    """
+    🏁 Virtual Drag Race — DRAG RACE REPORT
 
-    with st.spinner("Simulating drag race... 🏁"):
+    ### 🚘 Race Line-up
+    | Specification | Vehicle 1 | Vehicle 2 |
+    |---|---|---|
+    | **Vehicle** | {vehicle1} | {vehicle2} |
 
-        response = client.chat.completions.create(
-            model="openai/gpt-4o-mini",
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.6,
-            max_tokens=800
-        )    
+    ### ⚙️ 1. Performance Specifications
 
-    result_text = response.choices[0].message.content
+    | 📊 Metric | 🏎️ {vehicle1} | 🏎️ {vehicle2} |
+    |---|---:|---:|
+    | Power | XX.X bhp | XX.X bhp |
+    | Torque | XX.X Nm | XX.X Nm |
+    | Kerb Weight | XXXX kg | XXXX kg |
+    | Power-to-Weight | XX.X bhp/tonne | XX.X bhp/tonne |
+
+    ### ⏱️ 2. Acceleration & Drag Times
+
+    | 🏁 Test | 🏎️ {vehicle1} | 🏎️ {vehicle2} |
+    |---|---:|---:|
+    | 0–60 km/h | X.X seconds | X.X seconds |
+    | 0–100 km/h | X.X seconds | X.X seconds |
+    | Quarter Mile (402.3 m) | XX.X seconds | XX.X seconds |
+
+    For every timing, lower is better. Clearly distinguish estimated
+    times from verified manufacturer figures.
+
+    ### 🏆 3. Race Verdict
+
+    **🥇 Winner:** [Exact winning vehicle name]
+
+    **⏱️ Winning quarter-mile time:** XX.X seconds
+
+    **📏 Estimated winning margin:** X.X seconds
+
+    ### 🔍 4. Why Did It Win?
+
+    Explain the result in 3–5 concise bullet points. Discuss power,
+    torque, weight, power-to-weight ratio, traction, gearing, and
+    acceleration where relevant. Do not claim to know exact launch
+    conditions or traction data unless supplied.
+
+    ### 📈 5. Performance Breakdown
+
+    Briefly compare:
+    - 💪 **Power:** Which vehicle has the advantage?
+    - ⚖️ **Weight:** Which vehicle is lighter?
+    - 🚀 **Acceleration:** Which vehicle is quicker off the line?
+    - 🏁 **Quarter mile:** Which vehicle reaches the finish first?
+
+    ### ⚠️ 6. Accuracy & Assumptions
+
+    State which figures are estimates and identify important missing
+    data, such as exact variant specifications, transmission, tyres,
+    traction, and test conditions.
+
+    ## 📌 ACCURACY RULES
+
+    - Use the exact vehicle names supplied above throughout the report.
+    - Never invent specifications and present them as verified facts.
+    - Prefer reliable, variant-specific specifications when known.
+    - If reliable data is unavailable, provide a clearly labelled estimate
+    or state "Data unavailable".
+    - Keep units consistent: bhp, Nm, kg, bhp/tonne, km/h, seconds.
+    - Calculate power-to-weight as bhp divided by weight in tonnes.
+    - Make the winner consistent with the estimated quarter-mile times.
+    - If the difference is negligible or uncertain, explain that the
+    result could change under real-world conditions.
+    - Always provide a numerical quarter-mile time in seconds for BOTH
+    vehicles so the simulator can extract their times.
+    - Do not claim that a simulated result is a real-world test result.
+
+    Make the report exciting, professional, technically useful,
+    and easy to read.
+
+    ### 🤖 MACHINE-READABLE RACE DATA
+
+    RACE_TIME_1: {vehicle1} - XX.X seconds 
+    RACE_TIME_2: {vehicle2} - XX.X seconds
+
+    """    
+    
+    try:
+        with st.spinner("Simulating drag race... 🏁"):
+            result_text = ask_copilot(prompt)
+
+    except Exception as e:
+        st.error("Could not generate the race analysis with GitHub Copilot.")
+        st.code(f"{type(e).__name__}: {e}")
+        st.stop()
 
     st.session_state.race_result = result_text
     time1, time2 = extract_times(result_text, vehicle1, vehicle2)
@@ -417,34 +665,36 @@ if st.session_state.race_result:
     result_text = st.session_state.race_result       
 
     if time1 is None or time2 is None:
-        st.warning("⚠️ Could not extract quarter-mile times from AI response.")
-        st.stop() 
+        st.warning(
+            "Could not extract both quarter-mile times. "
+            "The AI analysis is still available below."
+        )
+    else:
+        st.markdown(f"""
+        <div class="card">
+            <h2 class="card-title">🏁 Race Result</h2>
+            <div class="card-body">
+                {vehicle1} 
+                <span class="vs-style"><img src="data:image/gif;base64,{vs_image}" alt="VS" /></span> 
+                {vehicle2}
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        st.divider()
 
-    st.markdown(f"""
-    <div class="card">
-        <h2 class="card-title">🏁 Race Result</h2>
-        <h3 style="color:white; text-align:center;">
-            {vehicle1} 
-            <span style="margin: 10px 0; vertical-align:middle; display:block;"><img src="data:image/gif;base64,{vs_image}" alt="VS" style="max-height:75px" /></span> 
-            {vehicle2}
-        </h3>
-    </div>
-    """, unsafe_allow_html=True)
-    st.divider()
+        # -----------------------------
+        # RACE VISUALIZATION
+        # -----------------------------
 
-    # -----------------------------
-    # RACE VISUALIZATION
-    # -----------------------------
+        run_animation(vehicle1, vehicle2, time1, time2)
 
-    run_animation(vehicle1, vehicle2, time1, time2)
+        # -----------------------------
+        # AI ANALYSIS LAST
+        # -----------------------------
 
-    # -----------------------------
-    # AI ANALYSIS LAST
-    # -----------------------------
-
-    st.markdown(f"""
-    <div class="card">
-    <h2 class="card-title">📊 AI Race Analysis</h2>    
-    {result_text} 
-    </div>
-    """, unsafe_allow_html=True)
+        st.markdown(f"""
+        <div class="card">
+        <h2 class="card-title">📊 AI Race Analysis</h2>    
+        {result_text} 
+        </div>
+        """, unsafe_allow_html=True)
