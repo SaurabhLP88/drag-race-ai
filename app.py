@@ -372,7 +372,6 @@ async def _ask_copilot_async(prompt: str) -> str:
         await client.start()
 
         session = await client.create_session(model="auto")
-
         response = await session.send_and_wait(prompt)
         result = response.data.content
 
